@@ -46,7 +46,7 @@ Aviation Audible Warning is an open-source, flexible audible warning system for 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/aviation-audible-warning.git
+   git clone https://github.com/loidolt/aviation-audible-warning.git
 
 2. Open the project in the Arduino IDE or your preferred development environment.
 3. Install the required libraries via the Library Manager:
