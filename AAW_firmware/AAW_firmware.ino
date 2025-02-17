@@ -57,10 +57,10 @@ const int relayPin  = 1;
 
 // -------------------------
 // Timing Settings (in milliseconds)
-const unsigned long debounceDelay    = 50;    // Button debounce time
-const unsigned long crossCheckDuration = 2000; // How long to energize relay for cross-check
+const unsigned long debounceDelay      = 50;    // Button debounce time
+const unsigned long crossCheckDuration = 2000;  // How long to energize relay for cross-check
 const unsigned long alertRepeatDelay   = 10000; // Delay between repeated audio playbacks in ALERT state
-const unsigned long watchdogTimeout    = 2000; // Watchdog timeout
+const unsigned long watchdogTimeout    = 2000;  // Watchdog timeout
 
 // -------------------------
 // System State Definitions
@@ -68,10 +68,10 @@ enum SystemState { IDLE, ALERT, CROSS_CHECK };
 SystemState state = IDLE;
 
 // Timing and state management variables
-unsigned long lastButtonTime    = 0;
+unsigned long lastButtonTime      = 0;
 unsigned long crossCheckStartTime = 0;
-unsigned long lastAudioEndTime  = 0;   // Time when last audio finished playing
-bool alertAudioStarted = false;         // Indicates if alert audio is currently playing
+unsigned long lastAudioEndTime    = 0;      // Time when last audio finished playing
+bool alertAudioStarted            = false;  // Indicates if alert audio is currently playing
 
 // -------------------------
 // SD Audio File Object
@@ -91,7 +91,7 @@ void setup() {
   while (!Serial); // Wait for serial monitor (optional)
 
   // Initialize pins
-  pinMode(sensorPin, INPUT);         // Sensor on A1
+  pinMode(sensorPin, INPUT);           // Sensor on A1
   pinMode(buttonPin, INPUT_PULLUP);    // Button on A2 (internal pull‑up)
   pinMode(relayPin, OUTPUT);           // Relay control (for 24V indicator light)
   digitalWrite(relayPin, LOW);         // Ensure relay is off initially
